@@ -8,10 +8,11 @@ if size(data,2) == 2
 end
 data = data-min(data);
 data = data/max(data);
-data = data.*127;
+data = data.*255;
 data = round(data);
 data = uint8(data);
 
 outputfile = fopen('7.bb8','wb');
+>>>>>>> 4bc6e99b0d75512535c378e4988593ec56c02fdf
 fwrite(outputfile,data);
 fclose(outputfile);
